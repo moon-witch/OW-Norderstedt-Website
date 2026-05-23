@@ -1,15 +1,7 @@
 [variables]
+NIXPACKS_NODE_VERSION = "22"
 CI = "true"
 NODE_ENV = "production"
-
-[phases.setup]
-nixPkgs = ["nodejs_22"]
-
-[phases.install]
-cmds = ["corepack enable", "pnpm install --frozen-lockfile"]
-
-[phases.build]
-cmds = ["pnpm run build"]
 
 [start]
 cmd = "node build/index.js"
