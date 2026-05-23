@@ -233,7 +233,7 @@
 		<div class="container">
 			<SectionIntro
 				eyebrow="Kinder, Jugendliche und Familien"
-				title="Angebote für jede Altersgruppe"
+				title="Angebote bei denen jeder dabei sein kann"
 				text="Von der Eltern-Kind-Werkstatt über Technik Kids bis zu Projekten für Jugendliche."
 			/>
 			<div class="audience-grid">
