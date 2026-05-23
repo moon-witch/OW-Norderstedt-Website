@@ -1,8 +1,17 @@
 <script lang="ts">
 	import type { Offer } from '$lib/types';
+	import { getPdfLinkRel, getPdfLinkTarget } from '$lib/utils/link-targets';
 	import { toRequestFormHref } from '$lib/utils/request-links';
 
 	let { offer } = $props<{ offer: Offer }>();
+	const href = $derived(
+		toRequestFormHref(
+			offer.ctaHref,
+			offer.title,
+			offer.title,
+			offer.id === 'offene-werkstatt' ? 'visit' : 'workshop'
+		)
+	);
 </script>
 
 <article class="card offer-card" id={offer.id}>
@@ -18,12 +27,9 @@
 		{#if offer.ctaHref && offer.ctaLabel}
 			<a
 				class="button-ghost offer-card__cta"
-				href={toRequestFormHref(
-					offer.ctaHref,
-					offer.title,
-					offer.title,
-					offer.id === 'offene-werkstatt' ? 'visit' : 'workshop'
-				)}
+				{href}
+				target={getPdfLinkTarget(href)}
+				rel={getPdfLinkRel(href)}
 			>
 				{offer.ctaLabel}
 			</a>

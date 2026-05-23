@@ -7,6 +7,7 @@
 	import WorkshopCard from '$lib/components/WorkshopCard.svelte';
 	import { slide } from 'svelte/transition';
 	import { buildRequestFormHref, toRequestFormHref } from '$lib/utils/request-links';
+	import { getPdfLinkRel, getPdfLinkTarget } from '$lib/utils/link-targets';
 
 	let { data } = $props<{ data: { site: import('$lib/types').SiteContent } }>();
 	const site = $derived(data.site);
@@ -67,7 +68,14 @@
 				<div class="hero__actions">
 					<a class="button" href={workshopRequestHref}>Workshopplatz anfragen</a>
 					<a class="button-ghost" href={visitRequestHref}>Ersten Besuch planen</a>
-					<a class="button-ghost" href="/docs/workshopprogramm.pdf">Programmheft</a>
+					<a
+						class="button-ghost"
+						href="/docs/workshopprogramm.pdf"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Programmheft
+					</a>
 				</div>
 			</div>
 
@@ -108,6 +116,12 @@
 	<section class="hero-facts-band" aria-label="Wichtige Informationen">
 		<div class="container hero__facts">
 			{#each site.keyFacts as fact}
+				{@const href = toRequestFormHref(
+					fact.linkHref,
+					fact.value,
+					fact.label,
+					fact.label === 'Offen für Besucher' ? 'visit' : 'general'
+				)}
 				<article class="hero-fact">
 					<span class="hero-fact__label">{fact.label}</span>
 					<h2>{fact.value}</h2>
@@ -115,12 +129,9 @@
 					{#if fact.linkHref && fact.linkLabel}
 						<a
 							class="hero-fact__link"
-							href={toRequestFormHref(
-								fact.linkHref,
-								fact.value,
-								fact.label,
-								fact.label === 'Offen für Besucher' ? 'visit' : 'general'
-							)}
+							{href}
+							target={getPdfLinkTarget(href)}
+							rel={getPdfLinkRel(href)}
 						>
 							{fact.linkLabel}
 						</a>
@@ -216,7 +227,14 @@
 					</ul>
 					<div class="button-row">
 						<a class="button" href={workshopRequestHref}>Workshopplatz anfragen</a>
-						<a class="button-ghost" href="/docs/workshopprogramm.pdf">Programmheft</a>
+						<a
+							class="button-ghost"
+							href="/docs/workshopprogramm.pdf"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Programmheft
+						</a>
 					</div>
 				</article>
 			</div>
@@ -297,7 +315,13 @@
 					</div>
 					<div class="docs-grid">
 						{#each site.documents as document}
-							<a href={document.href}>{document.label}</a>
+							<a
+								href={document.href}
+								target={getPdfLinkTarget(document.href)}
+								rel={getPdfLinkRel(document.href)}
+							>
+								{document.label}
+							</a>
 						{/each}
 					</div>
 				</article>

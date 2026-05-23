@@ -1,8 +1,10 @@
 <script lang="ts">
 	import type { Workshop } from '$lib/types';
+	import { getPdfLinkRel, getPdfLinkTarget } from '$lib/utils/link-targets';
 	import { toRequestFormHref } from '$lib/utils/request-links';
 
 	let { workshop } = $props<{ workshop: Workshop }>();
+	const href = $derived(toRequestFormHref(workshop.ctaHref, workshop.title, workshop.title, 'workshop'));
 </script>
 
 <article class="card workshop-card">
@@ -26,7 +28,9 @@
 		<p>{workshop.summary}</p>
 		<a
 			class="button workshop-card__cta"
-			href={toRequestFormHref(workshop.ctaHref, workshop.title, workshop.title, 'workshop')}
+			{href}
+			target={getPdfLinkTarget(href)}
+			rel={getPdfLinkRel(href)}
 		>
 			{workshop.ctaLabel}
 		</a>
