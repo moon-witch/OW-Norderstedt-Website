@@ -30,7 +30,7 @@
 					</span>
 					<span class="brand__text">
 						<strong>{title}</strong>
-						<small>Besucherabend Do 17:00 bis 20:00 Uhr</small>
+						<small>Donnerstags offen: 17:00 bis 20:00 Uhr</small>
 					</span>
 				</a>
 			</div>
@@ -52,7 +52,7 @@
 					{/each}
 				</div>
 				<a class="button site-header__cta" href={primaryCtaHref} onclick={closeNav}>
-					Kursplatz anfragen
+					Workshopplatz anfragen
 				</a>
 			</nav>
 		</div>

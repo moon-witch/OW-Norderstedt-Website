@@ -2,61 +2,61 @@ import type { SiteContent } from '$lib/types';
 
 export const localSiteContent: SiteContent = {
 	title: 'Offene Werkstatt Norderstedt',
-	eyebrow: 'Gemeinnützige Werkstatt in Norderstedt',
-	heroTitle: 'Werkstattkurse und offene Abende, bei denen man direkt ins Machen kommt.',
+	eyebrow: 'Junger Verein mit offener Werkstatt in Norderstedt',
+	heroTitle: 'Werkstattkurse und offene Abende rund ums Selbermachen.',
 	heroText:
-		'Von 3D-Druck und Lasercutting bis Holz, Metall, Elektronik und Familienformaten: Die Offene Werkstatt Norderstedt verbindet Kurse, eigene Projekte und handwerklich-technische Bildung an einem Ort.',
+		'Von 3D-Druck und Lasercutting bis Holz, Metall, Elektronik und Familienformaten: In der Offenen Werkstatt kann man Neues ausprobieren, Fragen stellen und eigene Ideen direkt umsetzen.',
 	footerNote:
-		'Gemeinnütziger Verein für handwerklich-technische Bildung und offene Werkstattarbeit in Norderstedt.',
+		'Die Offene Werkstatt Norderstedt ist ein gemeinnütziger Verein für offene Werkstattarbeit und handwerklich-technische Bildung in Norderstedt.',
 	quickLinks: [
 		{
 			href: '#starten',
 			label: 'Einstieg',
-			title: 'Den passenden Weg finden',
-			description: 'Offener Abend, Kurs oder Familienformat: hier beginnt der einfachste Einstieg.'
+			title: 'Leicht reinfinden',
+			description: 'Offener Abend, Kurs oder Familienformat: hier beginnt der einfache Einstieg.'
 		},
 		{
 			href: '#workshops',
 			label: 'Kurse',
-			title: 'Workshops und Reihen',
-			description: 'Aktuelle Themen, klare Altersangaben und direkte Anfrage ohne Mail-Chaos.'
+			title: 'Kurse und Reihen',
+			description: 'Aktuelle Themen, klare Altersangaben und ein direkter Weg zur Anfrage.'
 		},
 		{
 			href: '#werkstatt',
 			label: 'Werkstatt',
 			title: 'Maschinen und Einweisungen',
-			description: 'Raum, Maschinen, Unterlagen und der Weg zur sicheren Nutzung an einer Stelle.'
+			description: 'Raum, Maschinen, Unterlagen und der sichere Einstieg an einer Stelle.'
 		},
 		{
 			href: '#kontakt',
 			label: 'Kontakt',
-			title: 'Anfahrt und Nachricht',
-			description: 'Adresse, Öffnungszeiten, Karte und Kontakt bleiben am Ende kompakt gebündelt.'
+			title: 'Kontakt und Anfahrt',
+			description: 'Adresse, Öffnungszeiten, Karte und Kontakt bleiben kompakt gebündelt.'
 		}
 	],
 	keyFacts: [
 		{
 			label: 'Offen für Besucher',
 			value: 'Donnerstag, 17:00 bis 20:00 Uhr',
-			detail: 'Der offene Werkstattabend ist der einfachste Einstieg für neue Besucher.',
+			detail: 'Der offene Werkstattabend ist meist der einfachste Start für neue Besucher.',
 			linkLabel: 'Besuch anmelden',
 			linkHref: 'mailto:moin@ow-norderstedt.de?subject=Besucheranmeldung%20-%20Offene%20Werkstatt'
 		},
 		{
 			label: 'Mitgliederabend',
 			value: 'Dienstag und Donnerstag, 17:00 bis 20:00 Uhr',
-			detail: 'Dienstags ist freies Arbeiten für Vereinsmitglieder vorgesehen.'
+			detail: 'Dienstags gibt es freies Arbeiten für Vereinsmitglieder.'
 		},
 		{
 			label: 'Werkstattort',
-			value: 'Poppenbütteler Straße 230, 22851 Norderstedt',
+			value: 'Im Schulzentrum',
 			detail:
-				'Werk- und Technikräume im Schulzentrum Süd, erreichbar zum Beispiel mit der Buslinie 493.'
+				'Poppenbütteler Straße 230, 22851 Norderstedt. Die Werk- und Technikräume im Schulzentrum Süd sind gut erreichbar, zum Beispiel mit der Buslinie 493.'
 		},
 		{
-			label: 'Teilnahme',
-			value: 'Workshops grundsätzlich kostenfrei',
-			detail: 'Freiwillige Beiträge zu Material und Unterhalt der Werkstatt sind willkommen.',
+			label: 'Gut zu wissen',
+			value: 'Workshops sind bei uns kostenfrei',
+			detail: 'Freiwillige Beiträge zu Material und Unterhalt sind willkommen, aber kein Muss für den Einstieg.',
 			linkLabel: 'Programmheft',
 			linkHref: '/docs/workshopprogramm.pdf'
 		}
@@ -68,9 +68,9 @@ export const localSiteContent: SiteContent = {
 			audience: 'Freies Arbeiten',
 			schedule: 'Donnerstags für Besucher, dienstags und donnerstags für Mitglieder',
 			description:
-				'Die Werkstatt ist für nicht-kommerzielle Projekte geöffnet. Besucher arbeiten an Reparaturen, Holzprojekten, Elektronik oder 3D-Druck direkt vor Ort.',
+				'Die Werkstatt ist für nicht-kommerzielle Projekte offen. Vor Ort entstehen Reparaturen, Holzprojekte, Elektronik-Ideen und 3D-Druck.',
 			detail:
-				'Viele Maschinen sind nach Einweisung nutzbar. Für den ersten Besuch ist die kurze Anmeldung der direkteste Weg.',
+				'Viele Maschinen sind nach Einweisung nutzbar. Für den ersten Besuch reicht eine kurze Anmeldung.',
 			image: '/media/02.JPG',
 			ctaLabel: 'Besuch anmelden',
 			ctaHref: 'mailto:moin@ow-norderstedt.de?subject=Besucheranmeldung%20-%20Offene%20Werkstatt'
@@ -93,9 +93,9 @@ export const localSiteContent: SiteContent = {
 			audience: 'Begleitete Formate',
 			schedule: 'Samstage und Reihen über das Jahr',
 			description:
-				'Eltern-Kind-Werkstatt, Technik Kids, Robotik und projektbezogene Angebote schaffen einen klaren Einstieg für junge Besucher.',
+				'Eltern-Kind-Werkstatt, Technik Kids, Robotik und weitere Formate schaffen einen guten Einstieg für junge Besucher und ihre Begleitung.',
 			detail:
-				'Viele Formate haben begrenzte Plätze. Deshalb bleiben klare Altersangaben und eine gut sichtbare Anfrage wichtig.',
+				'Die Gruppen bleiben bewusst überschaubar, damit genug Zeit für Fragen, Ausprobieren und Unterstützung bleibt.',
 			image: '/media/EKW2.png',
 			ctaLabel: 'Familienangebote ansehen',
 			ctaHref: '#familien'
@@ -110,7 +110,7 @@ export const localSiteContent: SiteContent = {
 			audience: 'ab 12 Jahre',
 			level: 'Anfänger',
 			summary:
-				'Praxisnaher Einstieg vom Modell über den Slicer bis zum fertigen Druck. Geeignet für alle, die die Grundlagen für eigene Drucke in der offenen Werkstatt lernen möchten.',
+				'Der Workshop zeigt Schritt für Schritt den Weg vom Modell über den Slicer bis zum fertigen Druck. Das passt gut für alle, die später eigene Drucke in der Werkstatt umsetzen möchten.',
 			image: '/media/3dDruck3.png',
 			ctaLabel: 'Anmeldung 13.06.26',
 			ctaHref:
@@ -124,7 +124,7 @@ export const localSiteContent: SiteContent = {
 			audience: 'ab 12 Jahre',
 			level: 'Anfänger',
 			summary:
-				'Einführung in Materialgrenzen, Vorarbeiten und sichere Nutzung des Lasercutters für Holz, Kunststoff, Glas, Pappe und Papier.',
+				'Gezeigt werden Materialien, Vorarbeiten und die sichere Nutzung des Lasercutters für Holz, Kunststoff, Glas, Pappe und Papier.',
 			image: '/media/Lasercutter.jpg',
 			ctaLabel: 'Anmeldung Zusatztermin',
 			ctaHref:
@@ -138,7 +138,7 @@ export const localSiteContent: SiteContent = {
 			audience: 'ab 14 Jahre',
 			level: 'Anfänger',
 			summary:
-				'Grundtechniken wie Sägen, Feilen, Bohren, Biegen und einfache Verbindungen, um die Hemmschwelle bei Metallprojekten zu senken.',
+				'Der Kurs vermittelt Sägen, Feilen, Bohren, Biegen und einfache Verbindungen so, dass der Einstieg in erste Metallprojekte leichter fällt.',
 			image: '/media/Metallbearbeitung.png',
 			ctaLabel: 'Anmeldung',
 			ctaHref:
@@ -152,7 +152,7 @@ export const localSiteContent: SiteContent = {
 			audience: 'ab 12 Jahre',
 			level: 'Anfänger',
 			summary:
-				'Einführung in Arduino, Programmierung, Sensorik und Aktoren. Der zweite Termin vertieft das Gelernte aus Teil 1.',
+				'Geboten wird ein einfacher Einstieg in Arduino, Programmierung, Sensorik und Aktoren. Im zweiten Termin geht es auf Teil 1 aufbauend weiter.',
 			image: '/media/Mikrocontroller.png',
 			ctaLabel: 'Teil 1 anmelden',
 			ctaHref:
@@ -165,9 +165,9 @@ export const localSiteContent: SiteContent = {
 			title: 'Für Familien',
 			kicker: '5 bis 10 Jahre mit Begleitung',
 			description:
-				'Die Eltern-Kind-Werkstatt verbindet Materialerfahrung, handwerkliche Grundlagen und gemeinsames Ausprobieren in einem betreuten Rahmen.',
+				'Die Eltern-Kind-Werkstatt bietet einen begleiteten Rahmen für Materialerfahrung, erste handwerkliche Schritte und gemeinsames Ausprobieren.',
 			detail:
-				'Die aktuellen Termine liegen samstags zwischen Oktober 2025 und Mai 2026. Plätze sind begrenzt, deshalb bleibt die Anmeldung wichtig.',
+				'Die Termine liegen samstags zwischen Oktober 2025 und Mai 2026. Die Plätze sind begrenzt, deshalb lohnt sich eine kurze Anmeldung.',
 			image: '/media/EKW2.png',
 			ctaLabel: 'Eltern-Kind anmelden',
 			ctaHref: 'mailto:moin@ow-norderstedt.de?subject=Anmeldung%20zu%20EKW%20%2F%202025%2F26'
@@ -177,9 +177,9 @@ export const localSiteContent: SiteContent = {
 			title: 'Für Kinder',
 			kicker: 'Technik Kids und Kreativformate',
 			description:
-				'Technik Kids richtet sich an 10- bis 12-Jährige und bündelt mehrere praktische Reihen mit klarer Altersangabe und überschaubaren Materialbeiträgen.',
+				'Technik Kids bringt praktische Reihen für 10- bis 12-Jährige mit klarer Altersangabe und überschaubaren Materialbeiträgen zusammen.',
 			detail:
-				'Dazu kommen weitere Formate wie Kreativangebote oder Brückenbau, die einen spielerischen Zugang zur Werkstatt schaffen.',
+				'Dazu kommen weitere Formate wie Kreativangebote oder Brückenbau, damit der Zugang zur Werkstatt spielerisch bleibt.',
 			image: '/media/Technik-Kids.png',
 			ctaLabel: 'Technik Kids anfragen',
 			ctaHref:
@@ -190,9 +190,9 @@ export const localSiteContent: SiteContent = {
 			title: 'Für Jugendliche',
 			kicker: 'Robotik, TiP und eigene Projekte',
 			description:
-				'Jugendliche können über Robotik-Angebote oder das offene Projektformat TiP einen Einstieg finden und später in die reguläre Werkstatt hineinwachsen.',
+				'Robotik-Angebote und das offene Projektformat TiP geben Jugendlichen einen guten Einstieg in eigene Ideen und Technikprojekte.',
 			detail:
-				'Zwischen festen Reihen und offenen Projekten gibt es genug Raum, eigene Interessen auszuprobieren.',
+				'Zwischen festen Reihen und offenen Projekten bleibt genug Raum, um eigene Interessen auszuprobieren.',
 			image: '/media/Brückentest.jpg',
 			ctaLabel: 'TiP per Mail anfragen',
 			ctaHref: 'mailto:moin@ow-norderstedt.de?subject=TiP:%20Interesse%20anmelden'
@@ -242,25 +242,25 @@ export const localSiteContent: SiteContent = {
 	],
 	contactCards: [
 		{
-			title: 'Adresse',
+			title: 'Hier findet ihr uns',
 			lines: ['Poppenbütteler Straße 230', '22851 Norderstedt', 'Schulzentrum Süd']
 		},
 		{
-			title: 'Kontakt',
+			title: 'So erreicht ihr uns',
 			lines: [
-				'E-Mail: moin@ow-norderstedt.de',
+				'Am besten per Mail: moin@ow-norderstedt.de',
 				'ÖPNV: Buslinie 493',
 				'Haltestelle: Schulzentrum Süd'
 			],
-			linkLabel: 'E-Mail schreiben',
+			linkLabel: 'Mail schreiben',
 			linkHref: 'mailto:moin@ow-norderstedt.de'
 		},
 		{
-			title: 'Öffnungszeiten',
+			title: 'Wann wir da sind',
 			lines: [
-				'Mitglieder: Dienstag und Donnerstag, 17:00 bis 20:00 Uhr',
-				'Besucher: Donnerstag, 17:00 bis 20:00 Uhr',
-				'Geschlossen an Feiertagen sowie in Sommer- und Winterpause'
+				'Für Mitglieder: Dienstag und Donnerstag, 17:00 bis 20:00 Uhr',
+				'Für Besucher: Donnerstag, 17:00 bis 20:00 Uhr',
+				'In Ferien und an Feiertagen bleibt die Werkstatt geschlossen'
 			]
 		}
 	],
@@ -269,7 +269,7 @@ export const localSiteContent: SiteContent = {
 	email: 'mailto:moin@ow-norderstedt.de',
 	mastodonUrl: 'https://chaos.social/@OWN',
 	membershipCopy:
-		'Die Offene Werkstatt Norderstedt e. V. wurde 2020 gegründet und wird von rund 60 ehrenamtlich aktiven Mitgliedern getragen. Mitglieder unterstützen die Arbeit mit 1 bis 5 Euro im Monat und helfen dabei, Werkstattabende, Schulungen und offene Formate dauerhaft zu sichern.',
+		'Die Offene Werkstatt Norderstedt wurde 2020 gegründet und wird heute von rund 60 aktiven Mitgliedern getragen. Mit 1 bis 5 Euro im Monat helfen Mitglieder dabei, dass offene Abende, Kurse und Familienformate verlässlich stattfinden können.',
 	campusCopy:
-		'Die Werkstatt nutzt die Werk- und Technikräume im Schulzentrum Süd. Gute und verlässliche Räume bleiben eine wichtige Grundlage dafür, dass Angebote für Kinder, Jugendliche und Erwachsene langfristig stattfinden können.'
+		'Die Werk- und Technikräume im Schulzentrum Süd geben Kindern, Jugendlichen und Erwachsenen langfristig Raum zum Ausprobieren, Lernen und Weiterbauen.'
 };

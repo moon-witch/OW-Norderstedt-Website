@@ -115,7 +115,7 @@ export const actions = {
 				topic,
 				type,
 				values,
-				error: 'Bitte füllen Sie Name, E-Mail und Nachricht aus.'
+				error: 'Bitte ergänzt Name, E-Mail und Nachricht.'
 			});
 		}
 
@@ -126,7 +126,7 @@ export const actions = {
 				topic,
 				type,
 				values,
-				error: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'
+				error: 'Bitte tragt eine gültige E-Mail-Adresse ein.'
 			});
 		}
 
@@ -160,7 +160,7 @@ export const actions = {
 				type,
 				values,
 				error:
-					'Die Anfrage konnte gerade nicht versendet werden. Bitte versuchen Sie es später erneut oder schreiben Sie direkt an moin@ow-norderstedt.de.'
+					'Das Senden hat gerade nicht geklappt. Probiert es bitte später noch einmal oder schreibt uns direkt an moin@ow-norderstedt.de.'
 			});
 		}
 	}

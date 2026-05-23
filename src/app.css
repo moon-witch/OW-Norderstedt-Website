@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "Charlie don't surf!";
+	src: url('/fonts/Charlie-dont-surf.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--bg: #f3efe5;
 	--bg-soft: #ebe4d6;
@@ -18,6 +26,12 @@
 	--radius: 4px;
 	--shadow: 0 22px 44px rgba(16, 21, 20, 0.08);
 	--shadow-strong: 0 28px 64px rgba(16, 21, 20, 0.18);
+	--font-display:
+		"Charlie don't surf!",
+		'Avenir Next',
+		'Segoe UI',
+		'Trebuchet MS',
+		sans-serif;
 }
 
 * {
@@ -146,6 +160,8 @@ code {
 h1 {
 	margin: 0;
 	line-height: 1.02;
+	font-family: var(--font-display);
+	font-weight: 400;
 }
 
 h1 {
@@ -353,7 +369,10 @@ h1 {
 }
 
 .brand__text strong {
+	font-family: var(--font-display);
 	font-size: 0.98rem;
+	font-weight: 400;
+	line-height: 1;
 }
 
 .brand__text small {
@@ -427,11 +446,11 @@ h1 {
 }
 
 .hero__layout {
-	grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+	grid-template-columns: minmax(0, 1fr) minmax(21rem, 27rem);
 	grid-template-areas:
 		'copy visual'
 		'benefits benefits';
-	gap: 1.35rem 2rem;
+	gap: 1.35rem 2.75rem;
 	align-items: center;
 	align-content: center;
 	min-height: calc(100svh - 10rem);
@@ -439,7 +458,15 @@ h1 {
 
 .hero__copy {
 	grid-area: copy;
-	max-width: 35rem;
+	min-width: 0;
+	max-width: 32rem;
+}
+
+.hero h1 {
+	max-width: 8.5ch;
+	font-size: clamp(2.2rem, 4vw, 3.5rem);
+	line-height: 0.98;
+	text-wrap: balance;
 }
 
 .hero__subline {
@@ -497,6 +524,8 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	justify-self: end;
+	width: 100%;
 	min-width: 0;
 	min-height: 0;
 	margin-top: 0;
@@ -504,14 +533,14 @@ h1 {
 
 .hero__photo {
 	position: relative;
-	width: min(29rem, 100%);
+	width: min(27rem, 100%);
 	margin: 0;
 	overflow: hidden;
 	border: 1px solid rgba(255, 255, 255, 0.08);
 	border-radius: var(--radius);
 	background: rgba(255, 255, 255, 0.06);
 	box-shadow: 0 26px 54px rgba(5, 8, 8, 0.24);
-	transform: translateY(-2.3rem);
+	transform: translateY(-1rem);
 }
 
 .hero__photo::after {
@@ -571,7 +600,9 @@ h1 {
 .hero-fact h2 {
 	margin: 0 0 0.55rem;
 	font-size: 1.1rem;
-	line-height: 1.2;
+	font-family: var(--font-display);
+	font-weight: 400;
+	line-height: 1.08;
 }
 
 .hero-fact p {
@@ -599,7 +630,9 @@ h1 {
 .quick-links__header h2 {
 	margin: 0;
 	font-size: clamp(1.8rem, 3vw, 2.6rem);
-	line-height: 1.06;
+	font-family: var(--font-display);
+	font-weight: 400;
+	line-height: 1.04;
 }
 
 .quick-links__grid,
@@ -1082,6 +1115,7 @@ h1 {
 
 .stat-card strong {
 	font-size: 1.8rem;
+	font-weight: 800;
 	line-height: 1;
 }
 
@@ -1263,6 +1297,15 @@ h1 {
 
 .legal-card h1 {
 	font-size: clamp(2.2rem, 4vw, 3.3rem);
+}
+
+.contact-panel h3,
+.request-card__header h2,
+.request-side__card h2,
+.request-success h2 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	line-height: 1.08;
 }
 
 .request-side__card {
@@ -1537,6 +1580,10 @@ h1 {
 
 	h1 {
 		font-size: clamp(2.3rem, 12vw, 3.3rem);
+	}
+
+	.hero h1 {
+		font-size: clamp(2rem, 10vw, 2.8rem);
 	}
 
 	.section-title,

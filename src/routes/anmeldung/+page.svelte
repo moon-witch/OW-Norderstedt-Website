@@ -7,42 +7,40 @@
 	type RequestType = 'visit' | 'general' | 'workshop';
 
 	function getWorkshopHeadline(topic: string) {
-		const value = topic.trim();
-
-		if (!value || /^(workshop|werkstattkurs|werkstattkurse)$/i.test(value)) {
+		if (!topic.trim() || /^(workshop|werkstattkurs|werkstattkurse)$/i.test(topic.trim())) {
 			return 'Workshopplatz anfragen';
 		}
 
-		if (/maschineneinweisung/i.test(value)) {
+		if (/maschineneinweisung/i.test(topic)) {
 			return 'Maschineneinweisung anfragen';
 		}
 
-		return `Platz für ${value} anfragen`;
+		return 'Workshopplatz anfragen';
 	}
 
 	function getRequestVariant(type: RequestType, topic: string) {
 		if (type === 'visit') {
 			return {
 				pageTitle: 'Besuch anfragen',
-				eyebrow: 'Besuch planen',
-				heading: 'Ersten Besuch planen',
-				lead: 'Ein kurzer Hinweis reicht, damit der offene Werkstattabend besser planbar bleibt.',
-				cardTitle: 'Hilfreich vor dem ersten Abend',
+				eyebrow: 'Erster Besuch',
+				heading: 'Den ersten Besuch planen',
+				lead: 'Für den offenen Abend reicht ein kurzer Hinweis, damit alles besser planbar bleibt.',
+				cardTitle: 'Das ist vorab gut zu wissen',
 				cardItems: [
-					'Ob Sie allein, mit Familie oder als kleine Gruppe kommen',
-					'Woran Sie ungefähr arbeiten oder was Sie sich ansehen möchten',
+					'Ob ihr allein, mit Familie oder als kleine Gruppe kommt',
+					'Woran ihr ungefähr arbeiten möchtet oder was ihr euch ansehen wollt',
 					'Alter und Begleitung, wenn Kinder oder Jugendliche dabei sind'
 				],
 				formEyebrow: 'Besuchsanfrage',
-				formTitle: 'Kurz anmelden',
+				formTitle: 'Kurz Bescheid geben',
 				formLead: 'Die wichtigsten Angaben reichen. Alles Weitere kann vor Ort geklärt werden.',
 				participantsLabel: 'Wie viele Personen kommen?',
-				participantsPlaceholder: 'z. B. 1 Erwachsene Person und 1 Kind',
+				participantsPlaceholder: 'z. B. 1 erwachsene Person und 1 Kind',
 				ageLabel: 'Alter / Begleitung',
 				agePlaceholder: 'z. B. 11 Jahre, mit Elternteil',
 				messagePlaceholder:
-					'Wann möchten Sie vorbeikommen und woran möchten Sie ungefähr arbeiten oder was möchten Sie sich zeigen lassen?',
-				submitLabel: 'Besuch anfragen',
+					'Wann möchtet ihr vorbeikommen und woran möchtet ihr ungefähr arbeiten oder was möchtet ihr euch zeigen lassen?',
+				submitLabel: 'Besuch anmelden',
 				showPlanningFields: true
 			};
 		}
@@ -54,16 +52,16 @@
 				pageTitle: 'Workshop anfragen',
 				eyebrow: 'Workshopanfrage',
 				heading: getWorkshopHeadline(topic),
-				lead: 'Die Werkstatt bekommt direkt die Angaben, die für Platz, Alter und Vorbereitung relevant sind.',
-				cardTitle: 'Hilfreich für die Einplanung',
+				lead: 'Ein paar Angaben helfen bei Platz, Alter und Vorbereitung.',
+				cardTitle: 'Das hilft bei der Planung',
 				cardItems: [
 					'Welcher Workshop oder welche Einweisung gemeint ist',
-					'Anzahl Teilnehmende und Alter, wenn das Angebot Altersgrenzen hat',
-					'Vorkenntnisse oder Rückfragen, falls Material oder Maschinen eine Rolle spielen'
+					'Wie viele Personen dabei sind und welches Alter wichtig ist',
+					'Vorkenntnisse oder Rückfragen, wenn Material oder Maschinen eine Rolle spielen'
 				],
 				formEyebrow: 'Workshopplatz',
-				formTitle: isGenericWorkshopTopic ? 'Workshop oder Einweisung anfragen' : topic,
-				formLead: 'So landet die Anfrage direkt mit den passenden Eckdaten bei der Werkstatt.',
+				formTitle: 'Workshop oder Einweisung',
+				formLead: 'So landet die Anfrage direkt mit den passenden Eckdaten an der richtigen Stelle.',
 				participantsLabel: 'Anzahl Teilnehmende',
 				participantsPlaceholder: 'z. B. 1 Person',
 				ageLabel: 'Alter / Vorkenntnisse',
@@ -75,26 +73,26 @@
 			};
 		}
 
-		return {
-			pageTitle: 'Nachricht senden',
-			eyebrow: 'Allgemeine Anfrage',
-			heading: 'Nachricht an die Werkstatt',
-			lead: 'Für Mitgliedschaft, Kooperationen, Materialspenden oder allgemeine Rückfragen bleibt der Kontakt bewusst knapp gehalten.',
-			cardTitle: 'Gut geeignet für',
+			return {
+				pageTitle: 'Nachricht senden',
+				eyebrow: 'Kontakt',
+				heading: 'Nachricht an die Werkstatt',
+				lead: 'Fragen zu Mitgliedschaft, Kooperationen, Materialspenden oder allgemeinen Themen können hier kurz landen.',
+				cardTitle: 'Gut geeignet',
 			cardItems: [
-				'Allgemeine Rückfragen zur Werkstatt',
+				'Allgemeine Fragen rund um die Werkstatt',
 				'Kooperationen, Spenden oder Vereinsanliegen',
-				'Nachrichten, die keinem einzelnen Kurs zugeordnet sind'
+				'Alles, was zu keinem einzelnen Kurs gehört'
 			],
-			formEyebrow: 'Kontakt',
-			formTitle: 'Anliegen senden',
-			formLead: 'Schreiben Sie kurz, worum es geht. Die Werkstatt meldet sich per E-Mail zurück.',
+				formEyebrow: 'Kontakt',
+				formTitle: 'Kurz schreiben',
+				formLead: 'Kurz schreiben, worum es geht. Eine Antwort kommt per E-Mail zurück.',
 			participantsLabel: '',
 			participantsPlaceholder: '',
 			ageLabel: '',
 			agePlaceholder: '',
 			messagePlaceholder:
-				'Worum geht es? Je klarer das Anliegen beschrieben ist, desto schneller kann die Werkstatt reagieren.',
+				'Worum geht es? Je klarer die Nachricht ist, desto schneller kommt eine Rückmeldung.',
 			submitLabel: 'Nachricht senden',
 			showPlanningFields: false
 		};
@@ -110,7 +108,7 @@
 	<title>{variant.pageTitle} | Offene Werkstatt Norderstedt</title>
 	<meta
 		name="description"
-		content="Anfrage- und Anmeldeformular für Kurse, Werkstattbesuche und Angebote der Offenen Werkstatt Norderstedt."
+		content="Direkter Weg für Anfragen zu Kursen, Besuchen und weiteren Angeboten der Offenen Werkstatt Norderstedt."
 	/>
 </svelte:head>
 
@@ -135,13 +133,16 @@
 			<section class="card request-card">
 				{#if form?.success}
 					<div class="request-success" role="status" aria-live="polite">
-						<h2>Vielen Dank.</h2>
-						<p>Ihre Anfrage wurde versendet. Die Werkstatt meldet sich per E-Mail bei Ihnen.</p>
+						<h2>Danke.</h2>
+						<p>Die Anfrage ist raus. Eine Antwort kommt per E-Mail zurück.</p>
 					</div>
 				{:else}
 					<div class="request-card__header">
 						<p class="eyebrow request-card__eyebrow">{variant.formEyebrow}</p>
 						<h2>{variant.formTitle}</h2>
+						{#if currentType === 'workshop' && currentTopic}
+							<p><strong>Thema:</strong> {currentTopic}</p>
+						{/if}
 						<p>{variant.formLead}</p>
 					</div>
 
@@ -167,7 +168,7 @@
 								<input
 									name="name"
 									autocomplete="name"
-									placeholder="Vor- und Nachname"
+									placeholder="Vorname und Nachname"
 									value={form?.values?.name ?? ''}
 									required
 								/>
@@ -190,7 +191,7 @@
 								<input
 									name="phone"
 									autocomplete="tel"
-									placeholder="optional"
+									placeholder="wenn ihr mögt"
 									value={form?.values?.phone ?? ''}
 								/>
 							</label>
@@ -230,7 +231,7 @@
 
 						<div class="request-form__actions">
 							<button class="button" type="submit">{variant.submitLabel}</button>
-							<a class="button-ghost" href="/">Abbrechen</a>
+							<a class="button-ghost" href="/">Zurück</a>
 						</div>
 					</form>
 				{/if}

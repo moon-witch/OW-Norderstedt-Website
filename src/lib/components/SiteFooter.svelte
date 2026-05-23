@@ -11,9 +11,6 @@
 <footer class="footer">
 	<div class="container footer__inner">
 		<div class="footer__brand-block">
-			<div class="footer__brand-mark">
-				<WorkshopLogo />
-			</div>
 			<div>
 				<div class="footer__brand">Offene Werkstatt Norderstedt</div>
 				<p>{footerNote}</p>

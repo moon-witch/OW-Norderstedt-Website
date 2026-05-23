@@ -8,7 +8,7 @@
 <article class="card workshop-card">
 	<div class="workshop-card__head">
 		<div class="workshop-card__date">
-			<span class="workshop-card__date-label">Termin</span>
+			<span class="workshop-card__date-label">Wann?</span>
 			<strong>{workshop.dateLabel}</strong>
 			<span>{workshop.timeLabel}</span>
 		</div>

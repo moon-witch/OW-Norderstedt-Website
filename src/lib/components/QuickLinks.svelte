@@ -7,8 +7,8 @@
 <section class="quick-links">
 	<div class="container">
 		<div class="quick-links__header">
-			<p class="eyebrow">Direkte Wege</p>
-			<h2>Womit möchten Sie starten?</h2>
+			<p class="eyebrow">Direkt loslegen</p>
+			<h2>Womit willst du anfangen?</h2>
 		</div>
 		<div class="quick-links__grid">
 			{#each items as item, index}

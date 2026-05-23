@@ -48,7 +48,7 @@
 	<title>{site.title}</title>
 	<meta
 		name="description"
-		content="Offene Werkstatt Norderstedt: Werkstattkurse, offene Werkstatt, Familienangebote, Maschinen, Kontakt und Anfahrt."
+		content="Offene Werkstatt Norderstedt: Kurse, offene Abende, Familienangebote, Maschinen, Kontakt und Anfahrt auf einen Blick."
 	/>
 </svelte:head>
 
@@ -78,29 +78,27 @@
 						alt="Werkbänke in der Offenen Werkstatt Norderstedt"
 						loading="eager"
 					/>
-					<figcaption>Werkbänke, Material und Platz für eigene Projekte</figcaption>
+					<figcaption>Werkbänke, Material und Platz für eigene Ideen</figcaption>
 				</figure>
 			</div>
 
 			<ul class="hero__list">
 				<li>
-					<span class="hero__list-title">Einsteigerfreundlich</span>
+					<span class="hero__list-title">Leichter Einstieg</span>
 					<span class="hero__list-text">
-						Viele Kurse starten bei den Grundlagen und führen direkt in die offene Werkstatt.
+						Viele Kurse starten bei den Grundlagen und führen direkt in die Werkstatt hinein.
 					</span>
 				</li>
 				<li>
 					<span class="hero__list-title">Kostenfrei</span>
 					<span class="hero__list-text">
-						Freiwillige Beiträge zu Material und Unterhalt sind willkommen, aber kein Hindernis für
-						den Einstieg.
+						Workshops sind bei uns kostenfrei. Freiwillige Beiträge helfen bei Material und Unterhalt.
 					</span>
 				</li>
 				<li>
-					<span class="hero__list-title">Vor Ort</span>
+					<span class="hero__list-title">In Norderstedt</span>
 					<span class="hero__list-text">
-						Im Schulzentrum Süd, gut erreichbar für Familien, Jugendliche und Erwachsene in
-						Norderstedt.
+						Im Schulzentrum Süd, gut erreichbar für Familien, Jugendliche und Erwachsene.
 					</span>
 				</li>
 			</ul>
@@ -137,15 +135,13 @@
 	<section class="section section--paper" id="starten">
 		<div class="container start-grid">
 			<div class="start-copy">
-				<p class="eyebrow">So starten Sie</p>
-				<h2 class="section-title">Drei klare Wege zu uns</h2>
+				<p class="eyebrow">Mitmachen</p>
+				<h2 class="section-title">Drei einfache Wege, um dabei zu sein</h2>
 				<p class="section-copy">
-					Der Einstieg bleibt sichtbar und übersichtlich: offener Abend, Werkstattkurs oder
-					Familienformat.
+					Ob offener Abend, Werkstattkurs oder Familienformat: Der Einstieg ist kinderleicht.
 				</p>
 				<div class="button-row">
 					<a class="button" href={visitRequestHref}>Besuch anmelden</a>
-					<a class="button-ghost" href={generalRequestHref}>Frage senden</a>
 				</div>
 			</div>
 
@@ -205,21 +201,21 @@
 			<div class="workshops-top">
 				<SectionIntro
 					eyebrow="Workshops"
-					title="Kurse, die direkt ins Machen führen"
-					text="Jeder Termin zeigt Datum, Uhrzeit, Altersangabe und einen klaren Anmeldeweg. Die Themen greifen genau das auf, was später in der Werkstatt genutzt wird."
+					title="Kurse mit direktem Einstieg ins Handwerken"
+					text=""
 				/>
 				<article class="card workshop-note">
-					<span class="pill">Gut für den Einstieg</span>
-					<h3>Warum die Kurse der schnellste Weg in die Werkstatt sind</h3>
+					<span class="pill">Gut zum Reinkommen</span>
+					<h3>Warum Kurse oft der schnellste Weg in die Werkstatt sind</h3>
 					<ul class="note-list">
-						<li>Maschinen und Material werden im echten Einsatz erklärt.</li>
-						<li>Die Gruppen sind klein genug für Nachfragen und erste eigene Schritte.</li>
+						<li>Maschinen und Material werden direkt im echten Einsatz erklärt.</li>
+						<li>Die Gruppen bleiben klein genug für Fragen und erste eigene Schritte.</li>
 						<li>
-							Wer danach weitermachen will, hat direkt den Anschluss an den offenen Werkstattabend.
+							Wer danach weitermachen will, findet direkt Anschluss an den offenen Werkstattabend.
 						</li>
 					</ul>
 					<div class="button-row">
-						<a class="button" href={workshopRequestHref}>Kursplatz anfragen</a>
+						<a class="button" href={workshopRequestHref}>Workshopplatz anfragen</a>
 						<a class="button-ghost" href="/docs/workshopprogramm.pdf">Programmheft</a>
 					</div>
 				</article>
@@ -237,8 +233,8 @@
 		<div class="container">
 			<SectionIntro
 				eyebrow="Kinder, Jugendliche und Familien"
-				title="Begleitete Formate mit klaren Altersgruppen"
-				text="Von der Eltern-Kind-Werkstatt über Technik Kids bis zu Projektformaten für Jugendliche bleiben die Angebote gut lesbar und zielgerichtet."
+				title="Angebote für jede Altersgruppe"
+				text="Von der Eltern-Kind-Werkstatt über Technik Kids bis zu Projekten für Jugendliche."
 			/>
 			<div class="audience-grid">
 				{#each site.audienceTracks as track}
@@ -269,8 +265,8 @@
 			<div class="studio-copy">
 				<SectionIntro
 					eyebrow="Werkstatt und Maschinen"
-					title="Raum, Einweisungen und Maschinen für eigene Ideen"
-					text="Viele Maschinen sind nach Einweisung nutzbar. Genau deshalb stehen Sicherheit, guter Überblick und ein unkomplizierter Zugang nebeneinander."
+					title="Raum, Einweisungen und Maschinen"
+					text="Viele Maschinen sind nach Einweisung nutzbar. Sicherheit, guter Überblick und ein unkomplizierter Zugang gehören dabei zusammen."
 				/>
 				<div class="button-row">
 					<a class="button" href={machineRequestHref}>Maschineneinweisung anfragen</a>
@@ -296,7 +292,7 @@
 				<article class="card docs-panel">
 					<div class="docs-panel__intro">
 						<span class="pill">Unterlagen</span>
-						<h3>Wichtige Dateien an einer Stelle</h3>
+						<h3>Wichtige Unterlagen an einem Ort</h3>
 						<p>Programm, Werkstattordnung und Vereinsunterlagen bleiben schnell auffindbar.</p>
 					</div>
 					<div class="docs-grid">
@@ -313,9 +309,7 @@
 		<div class="container final-layout">
 			<div class="final-copy">
 				<p class="eyebrow">Verein und Kontakt</p>
-				<h2 class="section-title">
-					Gemeinnützig organisiert. Offen für neue Projekte und neue Leute.
-				</h2>
+				<h2 class="section-title">Verein, Kontakt und neue Projekte</h2>
 				<p class="section-copy">{site.membershipCopy}</p>
 				<p class="section-copy final-copy__spacer">{site.campusCopy}</p>
 
@@ -332,7 +326,7 @@
 			<div class="contact-panel" id="kontakt">
 				<div class="contact-panel__intro">
 					<span class="pill">Vor Ort in Norderstedt</span>
-					<h3>Vorbeikommen, nachfragen oder direkt anmelden</h3>
+					<h3>Vorbeikommen, schreiben oder direkt einen Platz anfragen</h3>
 					<p>Adresse, Öffnungszeiten und Kontakt bleiben kompakt, lesbar und ohne Umwege.</p>
 				</div>
 
@@ -365,7 +359,7 @@
 				</div>
 
 				<div class="button-row">
-					<a class="button" href={generalRequestHref}>Nachricht senden</a>
+					<a class="button" href={generalRequestHref}>Schreib uns</a>
 					<a class="button-ghost" href={site.mapUrl} target="_blank" rel="noreferrer"
 						>Karte öffnen</a
 					>
