@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Offene Werkstatt Norderstedt</title>
+  <rect width="64" height="64" rx="12" fill="#20282b" />
+  <path d="M18 18h10v28H18z" fill="#f5f0e7" />
+  <path d="M34 18h12c6.627 0 12 5.373 12 12v4c0 6.627-5.373 12-12 12H34V18zm10 10h-4v18h4c3.314 0 6-2.686 6-6v-6c0-3.314-2.686-6-6-6z" fill="#b3582a" transform="translate(-6 0)" />
+</svg>
