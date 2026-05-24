@@ -251,9 +251,7 @@ export const localSiteContent: SiteContent = {
 				'Am besten per Mail: moin@ow-norderstedt.de',
 				'ÖPNV: Buslinie 493',
 				'Haltestelle: Schulzentrum Süd'
-			],
-			linkLabel: 'Mail schreiben',
-			linkHref: 'mailto:moin@ow-norderstedt.de'
+			]
 		},
 		{
 			title: 'Wann wir da sind',

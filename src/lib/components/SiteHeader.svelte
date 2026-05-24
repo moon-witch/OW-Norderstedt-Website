@@ -17,11 +17,27 @@
 	function closeNav() {
 		navOpen = false;
 	}
+
+	function handleWindowKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			closeNav();
+		}
+	}
 </script>
+
+<svelte:window onkeydown={handleWindowKeydown} />
 
 <a class="skip-link" href="#main">Zum Inhalt</a>
 <header class="site-header">
 	<div class="container site-header__wrap">
+		{#if navOpen}
+			<button
+				class="site-header__backdrop"
+				type="button"
+				aria-label="Menü schließen"
+				onclick={closeNav}
+			></button>
+		{/if}
 		<div class="site-header__bar">
 			<div class="site-header__lead">
 				<a class="brand" href="#top">
